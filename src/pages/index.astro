@@ -1,0 +1,29 @@
+---
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import Service from "@/partials/Service.astro";
+import Banner from "@/components/Banner.astro";
+import type { Button } from "@/types";
+import { getEntryBySlug } from "astro:content";
+
+interface Homepage {
+  banner: {
+    title: string;
+    subtitle: string;
+    content: string;
+    image: string;
+    button: Button;
+  };
+}
+
+const homepage = await getEntryBySlug("homepage", "-index");
+const services = await getEntryBySlug("sections", "services");
+const call_to_action = await getEntryBySlug("sections", "call-to-action");
+const { banner }: Homepage = homepage.data;
+---
+
+<Base>
+  <Banner banner={banner}/>
+  <Service services={services} />
+  <CallToAction call_to_action={call_to_action} />
+</Base>

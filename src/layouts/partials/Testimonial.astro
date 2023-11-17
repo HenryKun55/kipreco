@@ -1,0 +1,61 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import { Image } from "astro:assets";
+const { services } = Astro.props;
+---
+
+{
+  services.data.enable && (
+    <section class="section">
+      <div class="container">
+        <div class="flex flex-col mb-4">
+          <h2
+            set:html={markdownify(services.data.title)}
+            class="mb-4 text-center"
+          />
+          {services.data.seeAll && (
+            <a
+              href="#"
+              class="ml-auto text-right font-bold cursor-pointer text-orange-600 dark:text-orange-500"
+            >
+              Ver todos
+            </a>
+          )}
+        </div>
+        <div class="col-12">
+          <div class="grid grid-cols-4 gap-6">
+            {services.data.testimonials.map(
+              (item: {
+                avatar: string;
+                content: string;
+                name: string;
+                designation: string;
+              }) => (
+                <div class="swiper-slide">
+                  <div class="flex gap-3 flex-col justify-center items-center rounded-lg bg-orange-400 px-7 py-10 dark:bg-darkmode-theme-light">
+                    <div class="flex">
+                      <div class="p-4 rounded-full text-dark bg-white dark:text-white dark:bg-orange-500">
+                        <Image
+                          height={60}
+                          width={60}
+                          src={item.avatar}
+                          alt={item.name}
+                          format="webp"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex items-center h-16">
+                      <span class="text-h5 text-center line-clamp-2 font-bold text-dark dark:text-white">
+                        {item.name}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ),
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
