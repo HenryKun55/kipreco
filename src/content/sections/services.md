@@ -1,13 +1,13 @@
 ---
 enable: true
-title: "Nós desentupimos"
+title: "Nós desentupimos:"
 
 # Services
 services:
   - name: "Caixas de esgoto"
     avatar: "/images/services/canos.svg"
 
-  - name: "Pias, Ralos, Vasos sanitários"
+  - name: "Pias"
     avatar: "/images/services/torneira.svg"
 
   - name: "Caixas de gordura"
@@ -17,8 +17,14 @@ services:
     avatar: "/images/services/valvula.svg"
 
   - name: "Encanamento de água limpa"
-    avatar: "/images/services/canos.svg"
+    avatar: "/images/services/valvula.svg"
+
+  - name: "Ralos"
+    avatar: "/images/services/ralo.svg"
+
+  - name: "Vasos sanitários"
+    avatar: "/images/services/torneira.svg"
 
   - name: "Tubulações de piscina"
-    avatar: "/images/services/valvula.svg"
+    avatar: "/images/services/canos.svg"
 ---

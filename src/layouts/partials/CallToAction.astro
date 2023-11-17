@@ -14,8 +14,8 @@ const { call_to_action } = Astro.props;
               <Image
                 class="w-full"
                 src={call_to_action.data.image}
-                width={392}
-                height={390}
+                width={500}
+                height={400}
                 alt="cta-image"
                 format="webp"
               />
@@ -31,7 +31,7 @@ const { call_to_action } = Astro.props;
               />
               {call_to_action.data.button.enable && (
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-primary bg-orange-600 border-0 dark:bg-orange-500 dark:text-white"
                   href={call_to_action.data.button.link}
                 >
                   {call_to_action.data.button.label}

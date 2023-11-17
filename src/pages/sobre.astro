@@ -5,8 +5,7 @@ import { Image } from "astro:assets";
 import { getEntryBySlug } from "astro:content";
 
 const about = await getEntryBySlug("about", "-index");
-const { Content } = await about.render();
-const { title, description, meta_title, image } = about.data;
+const { title, description, meta_title, image, content, button } = about.data;
 ---
 
 <Base
@@ -33,8 +32,16 @@ const { title, description, meta_title, image } = about.data;
           }
           <h2 set:html={markdownify(title)} class="h3 mb-6" />
           <div class="content">
-            <Content />
+            <p class="text-lg">{content}</p>
           </div>
+              {button.enable && (
+                <a
+                  class="btn btn-primary bg-orange-600 border-0 dark:bg-orange-500 dark:text-white"
+                  href={button.link}
+                >
+                  {button.label}
+                </a>
+              )}
         </div>
       </div>
     </div>
