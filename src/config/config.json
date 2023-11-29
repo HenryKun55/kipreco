@@ -1,15 +1,15 @@
 {
   "site": {
     "title": "Kipreço Desentupidora",
-    "base_url": "https://astroplate.netlify.app",
+    "base_url": "https://www.kpdesentupidora.com.br",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/logo.png",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "60",
     "logo_height": "60",
-    "logo_text": "Astroplate"
+    "logo_text": "Kipreço Desentupidora"
   },
 
   "settings": {
@@ -40,8 +40,8 @@
   },
 
   "metadata": {
-    "meta_author": "zeon.studio",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "astro and tailwind boilerplate"
+    "meta_author": "fh-dev",
+    "meta_image": "/images/logo.png",
+    "meta_description": "Nós nos orgulhamos de oferecer serviços de desentupimento residencial e comercial a preços acessíveis. Entendemos que um entupimento pode ser um grande inconveniente e, por isso, estamos disponíveis 24 horas por dia, 7 dias por semana, para atender emergências."
   }
 }
