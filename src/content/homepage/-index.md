@@ -9,7 +9,6 @@ banner:
     width: 600
     height: 600
   button:
-    enable: false
-    label: "Get Started For Free"
+    label: "Fale com a gente"
     link: "https://github.com/zeon-studio/astroplate"
 ---

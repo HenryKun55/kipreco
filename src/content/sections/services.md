@@ -5,26 +5,34 @@ title: "Nós desentupimos:"
 # Services
 services:
   - name: "Caixas de esgoto"
-    avatar: "/images/services/canos.svg"
+    image: "/images/services/esgoto.png"
+    description: "Manutenção e limpeza de caixas de esgoto para garantir o correto fluxo de água e prevenir entupimentos."
 
   - name: "Pias"
-    avatar: "/images/services/torneira.svg"
+    image: "/images/services/pia.png"
+    description: "Instalação e reparo de pias, assegurando um sistema funcional e eficiente de drenagem."
 
   - name: "Caixas de gordura"
-    avatar: "/images/services/ralo.svg"
+    image: "/images/services/gordura.png"
+    description: "Remoção e limpeza de resíduos em caixas de gordura para evitar obstruções e garantir o bom funcionamento."
 
   - name: "Bicas condutores"
-    avatar: "/images/services/valvula.svg"
+    image: "/images/services/bica.png"
+    description: "Manutenção e substituição de bicas condutores para prevenir vazamentos e assegurar o direcionamento adequado da água."
 
-  - name: "Encanamento de água limpa"
-    avatar: "/images/services/valvula.svg"
+  - name: "Encanamento"
+    image: "/images/services/encanamento.png"
+    description: "Instalação e reparo de sistemas de encanamento de água limpa para fornecer água potável de forma eficiente."
 
   - name: "Ralos"
-    avatar: "/images/services/ralo.svg"
+    image: "/images/services/ralo.png"
+    description: "Desentupimento e manutenção de ralos, garantindo o escoamento adequado e prevenindo maus odores."
 
   - name: "Vasos sanitários"
-    avatar: "/images/services/torneira.svg"
+    image: "/images/services/vaso.png"
+    description: "Reparo e instalação de vasos sanitários, assegurando um funcionamento adequado e eficiente."
 
   - name: "Tubulações de piscina"
-    avatar: "/images/services/canos.svg"
+    image: "/images/services/piscina.png"
+    description: "Manutenção e reparo de tubulações de piscina para garantir a circulação adequada da água e prevenir vazamentos."
 ---

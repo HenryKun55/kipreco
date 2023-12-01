@@ -1,55 +1,38 @@
 ---
 import { Image } from "astro:assets";
 const { services } = Astro.props;
+
+type Service = {
+  name: string;
+  description: string;
+  image: string;
+};
 ---
 
 {
   services.data.enable && (
-    <section class="section">
-      <div class="container">
-        <div class="flex flex-col mb-4">
-          <h1 class="mb-4 text-center">{services.data.title}</h1>
-          {services.data.seeAll && (
-            <a
-              href="#"
-              class="ml-auto text-right font-bold cursor-pointer text-orange-600 dark:text-orange-500"
-            >
-              Ver todos
-            </a>
-          )}
-        </div>
-        <div class="col-12">
-          <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-            {services.data.services.map(
-              (item: {
-                avatar: string;
-                content: string;
-                name: string;
-                designation: string;
-              }) => (
-                <div class="swiper-slide">
-                  <div class="flex gap-3 flex-col justify-center items-center rounded-lg bg-orange-500 px-7 py-10 dark:bg-darkmode-theme-light">
-                    <div class="flex">
-                      <div class="p-4 rounded-full text-dark bg-white dark:text-white dark:bg-orange-500">
-                        <Image
-                          height={60}
-                          width={60}
-                          src={item.avatar}
-                          alt={item.name}
-                          format="webp"
-                        />
-                      </div>
-                    </div>
-                    <div class="flex items-center h-16">
-                      <span class="text-h6 md:text-h5 text-center line-clamp-2 font-bold text-dark dark:text-white">
-                        {item.name}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ),
-            )}
-          </div>
+    <section>
+      <div class="container py-20">
+        <h1 class="text-center pb-4">{services.data.title}</h1>
+        <div class="grid w-full grid-cols-1 gap-6 mx-auto md:grid-cols-2 xl:grid-cols-3">
+          {services.data.services.map((service: Service) => (
+            <div class="group flex gap-3 flex-col justify-center items-center p-6 xl:justify-start xl:items-start cursor-pointer">
+              <Image
+                height={60}
+                width={200}
+                src={service.image}
+                alt="blog"
+                format="webp"
+                class="transition-all group-hover:-translate-y-2 rounded"
+              />
+              <span class="transition-all text-2xl font-semibold text-black group-hover:text-orange-500 lg:text-3xl dark:text-gray-300 dark:group-hover:text-white">
+                {service.name}
+              </span>
+              <p class="transition-all mx-auto text-xl leading-relaxed text-gray-500 text-center lg:text-base xl:text-start group-hover:text-orange-400 dark:group-hover:text-white ">
+                {service.description}
+              </p>{" "}
+            </div>
+          ))}
         </div>
       </div>
     </section>
