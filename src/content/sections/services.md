@@ -29,7 +29,7 @@ services:
     description: "Desentupimento e manutenção de ralos, garantindo o escoamento adequado e prevenindo maus odores."
 
   - name: "Vasos sanitários"
-    image: "/images/services/vaso.png"
+    image: "/images/services/vaso.jpeg"
     description: "Reparo e instalação de vasos sanitários, assegurando um funcionamento adequado e eficiente."
 
   - name: "Tubulações de piscina"
